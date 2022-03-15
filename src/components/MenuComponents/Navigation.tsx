@@ -13,7 +13,7 @@ const variants = {
 
 interface NavigationProps {
   isOpen: boolean;
-  toggle : () => void;
+  toggle: () => void;
 }
 
 export interface IRoute {
@@ -25,14 +25,14 @@ export interface IRoute {
 const RoutesList: IRoute[] = [
   { pathname: "#about", name: "who am i", color: "rgba(16, 172, 132,1.0)" },
   {
+    pathname: "#skills",
+    name: "what can i do",
+    color: "rgba(255, 107, 107,1.0)",
+  },
+  {
     pathname: "#experience",
     name: "experience",
     color: "rgba(255, 159, 67,1.0)",
-  },
-  {
-    pathname: "#what",
-    name: "what can i do",
-    color: "rgba(255, 107, 107,1.0)",
   },
   { pathname: "#contacts", name: "contacts", color: "rgba(46, 134, 222,1.0)" },
 ];
@@ -48,6 +48,7 @@ export const Navigation: FC<NavigationProps> = ({ isOpen, toggle }) => (
   >
     {RoutesList.map((route) => (
       <MenuItem
+        key={route.name}
         pathname={route.pathname}
         name={route.name}
         color={route.color}

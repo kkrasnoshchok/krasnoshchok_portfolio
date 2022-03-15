@@ -8,8 +8,7 @@ export const SNav = styled(motion.nav)`
   top: 0;
   left: 0;
   bottom: 0;
-  z-index: 1000;
-  width: 300px;
+  z-index: 10;
 `;
 
 export const SBackground = styled(motion.div)`
@@ -17,7 +16,7 @@ export const SBackground = styled(motion.div)`
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 100vw;
   background: #222f3e;
 `;
 
@@ -43,7 +42,7 @@ export const SMenuList = styled(motion.ul)`
   padding: 25px;
   position: absolute;
   top: 100px;
-  width: 230px;
+  width: 300px;
 `;
 
 export const SMenuItem = styled(motion.li)`
@@ -53,5 +52,5 @@ export const SMenuItem = styled(motion.li)`
 export const SMenuLink = styled.a`
   text-decoration: none;
   color: #c8d6e5;
-  font-size: ${size.m}px;
+  font-size: ${size.l}px;
 `;

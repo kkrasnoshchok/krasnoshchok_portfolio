@@ -15,10 +15,9 @@ export const SAboutTitle = styled(motion.h1)`
   font-size: ${size.xl * 2}px;
 `;
 export const SAboutIcon = styled(motion.div)`
-  font-size: 700px;
   opacity: 0.15;
+  font-size: 700px;
   position: absolute;
   top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%);
 `;

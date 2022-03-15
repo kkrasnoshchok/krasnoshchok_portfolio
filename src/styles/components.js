@@ -32,6 +32,16 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden !important;
     }
 
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+	    background-color: rgba(200, 214, 229,1.0);
+        border: 1px solid rgba(34, 47, 62,1.0);
+    }
+
     body {
         background: rgba(200, 214, 229,1.0);
         position: relative;
@@ -41,5 +51,5 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const SContainer = styled.div`
-  margin: 0px 10px 0 10px;
+  /* margin: 0px 10px 0 10px; */
 `;

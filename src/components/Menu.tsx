@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { Dispatch, FC, SetStateAction } from "react";
 import { useRef } from "react";
 import { useDimensions } from "../hooks/dimensions";
 import { Navigation } from "./MenuComponents/Navigation";
@@ -10,7 +10,7 @@ const sidebar = {
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
     transition: {
       type: "spring",
-      stiffness: 20,
+      stiffness: 10,
       restDelta: 2,
     },
   }),
@@ -24,8 +24,12 @@ const sidebar = {
   },
 };
 
-const Menu: FC = () => {
-  const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
+interface MenuProps {
+  isMenuOpen: boolean;
+  setMenuOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+const Menu: FC<MenuProps> = ({ isMenuOpen, setMenuOpen }) => {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   return (

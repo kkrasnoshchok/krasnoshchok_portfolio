@@ -18,11 +18,9 @@ const About: FC = () => {
 
   const iconVariants = {
     hidden: {
-      opacity: 0,
+      transform: "translate(-50%, -50%) rotate(0deg)",
     },
-    visible: {
-      opacity: [0, 0.15],
-    },
+    visible: { transform: "translate(-50%, -50%) rotate(360deg)" },
   };
 
   return (
@@ -45,7 +43,8 @@ const About: FC = () => {
         initial={"hidden"}
         variants={iconVariants}
         whileInView={"visible"}
-        viewport={{ amount: 0.1 }}
+        viewport={{ amount: 0.2 }}
+        transition={{ duration: 2, bounce: 0.2 }}
       >
         <FaReact />
       </SAboutIcon>
